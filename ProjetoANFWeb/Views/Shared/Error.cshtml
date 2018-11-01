@@ -1,0 +1,27 @@
+﻿@model ProjetoANFWeb.Models.ErrorViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <h1>Erro!</h1>
+    <span>Ocorreu um erro na comunicação com o servidor! Favor tentar novamente em alguns minutos.
+    Caso o problema persista, contate o administrador do site.</span>
+
+    <h2>Mensagem de erro para o desenvolvedor:</h2>
+    
+    <div>
+        <span>Obviamente, esta mensagem não estará disponível em produção, mas para a nossa preguiça, segue o erro retornado pelo serviço: </span>
+    </div>
+    <br/>
+
+    <div class="alert alert-danger">
+        <strong>@Model.Title</strong>
+        @Model.Message
+    </div>
+
+</body>
+</html>

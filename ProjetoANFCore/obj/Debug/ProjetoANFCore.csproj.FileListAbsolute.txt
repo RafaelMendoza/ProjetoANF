@@ -1,0 +1,11 @@
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\bin\Debug\ProjetoANFCore.dll.config
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\bin\Debug\ProjetoANFCore.dll
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\bin\Debug\ProjetoANFCore.pdb
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\obj\Debug\ProjetoANFCore.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\obj\Debug\ProjetoANFCore.csproj.CopyComplete
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\obj\Debug\ProjetoANFCore.dll
+C:\Users\User\Downloads\0003\0003\ProjetoANFCore\obj\Debug\ProjetoANFCore.pdb

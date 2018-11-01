@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Projeto ANF</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/datatables")*@
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/custom-layout.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/switch.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/switch.less" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/b-1.4.2/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Menu Lateral-->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Projeto Web</h3>
+                <strong>PW</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#authorSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-user-o"></i>
+                        Autor
+                    </a>
+                    <ul class="collapse list-unstyled" id="authorSubmenu">
+                        <li>@Html.ActionLink("Cadastrar", "Create", "Author")</li>
+                        <li>@Html.ActionLink("Consultar", "Index", "Author")</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-book"></i>
+                        Livro
+                    </a>
+                    <ul class="collapse list-unstyled" id="bookSubmenu">
+                        <li>@Html.ActionLink("Cadastrar", "Create", "Book")</li>
+                        <li>@Html.ActionLink("Consultar", "Index", "Book")</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#genreSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-hand-spock-o"></i>
+                        Gênero
+                    </a>
+                    <ul class="collapse list-unstyled" id="genreSubmenu">
+                        <li>@Html.ActionLink("Cadastrar", "Create", "Genre")</li>
+                        <li>@Html.ActionLink("Consultar", "Index", "Genre")</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Conteúdo da Página-->
+        <div id="content" class="content-wrapper" >
+            <!--Menu Superior-->
+            <div class="navbar navbar-inverse navbar-static-top">
+                <div class="navbar-header" style="float:right">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-toggle">
+                        @*<i class="glyphicon glyphicon-align-left"></i>*@
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>*@
+                    @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                </div>
+                @*<div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Author", "Index", "Author")</li>
+                        <li>@Html.ActionLink("Book", "Index", "Book")</li>
+                        <li>@Html.ActionLink("Genre", "Index", "Genre")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>*@
+            </div>
+            <!--Fim Menu Superior-->
+
+            <!--Conteúdo-->
+            <div class="content-wrapper-inner">
+                <div class="container-fluid">
+                    @RenderBody()
+
+                </div>
+               
+
+                <hr />
+                <!--Rodapé-->
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Projeto ANF Web</p>
+                </footer>
+                <!--Fim Rodapé-->
+            </div>
+            <!--Fim Conteúdo-->
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<script src="~/Scripts/notify/bootstrap-notify.js"></script>
+
+<script type="text/javascript">
+
+    $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open or close navbar
+        $('#sidebar').toggleClass('active');
+        // close dropdowns
+        $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+
+    function AjaxFormOnSuccess(data, input) {
+        $.notify(
+            {
+                icon: 'fa fa-check',
+                title: "Sucesso",
+                message: "Autor cadastrado com sucesso!"
+            },
+            {
+                type: 'minimalist success',
+                delay: 1000,
+                icon_type: 'class',
+                allow_dismiss: true,
+                template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+                '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+                '<i aria-hidden="true" data-notify="icon" class="pull-left"></i>' +
+                //'<span data-notify="icon" class="pull-left"></span>' +
+                '<span data-notify="title">{1}</span>' +
+                '<span data-notify="message">{2}</span>' +
+                '</div>'
+            }
+        );
+
+        //if (data.url) {
+        //    window.location.href = data.url;
+        //}
+
+        $.each(input, function (i, val) {
+            $('#' + val).val('');
+        });
+
+    }
+
+    function AjaxFormOnError(xhr, status, error) {
+        var errorJson = JSON.parse(error);
+
+        var errorTitle = errorJson.title;
+        var reasonPhare = errorJson.content;
+
+        $.notify(
+            {
+                icon: 'fa fa-exclamation-triangle',
+                title: errorTitle,
+                message: reasonPhare
+            },
+            {
+                type: 'minimalist error',
+                delay: 0,
+                icon_type: 'class',
+                allow_dismiss: true,
+                template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+                '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+                '<i aria-hidden="true" data-notify="icon" class="pull-left"></i>' +
+                //'<span data-notify="icon" class="pull-left"></span>' +
+                '<span data-notify="title">{1}</span>' +
+                '<span data-notify="message">{2}</span>' +
+                '</div>'
+            }
+        );
+    }
+
+</script>

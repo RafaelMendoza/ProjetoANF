@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoANFWeb", "ProjetoANFWeb\ProjetoANFWeb.csproj", "{0C4A6EBE-2040-4C00-A9F0-A63B34800D75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoANFService", "ProjetoANFService\ProjetoANFService.csproj", "{56970907-9086-4DC1-A6FB-979DD6C57F7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoANFCore", "ProjetoANFCore\ProjetoANFCore.csproj", "{0E46F684-B6B7-4C2C-9E06-BF1874489A83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C4A6EBE-2040-4C00-A9F0-A63B34800D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4A6EBE-2040-4C00-A9F0-A63B34800D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4A6EBE-2040-4C00-A9F0-A63B34800D75}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4A6EBE-2040-4C00-A9F0-A63B34800D75}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{56970907-9086-4DC1-A6FB-979DD6C57F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56970907-9086-4DC1-A6FB-979DD6C57F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56970907-9086-4DC1-A6FB-979DD6C57F7F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{56970907-9086-4DC1-A6FB-979DD6C57F7F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0E46F684-B6B7-4C2C-9E06-BF1874489A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E46F684-B6B7-4C2C-9E06-BF1874489A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E46F684-B6B7-4C2C-9E06-BF1874489A83}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E46F684-B6B7-4C2C-9E06-BF1874489A83}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B088AFF0-58B5-44B0-B734-05AE1D8A6996}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mendozaweb.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ProjetoANFWeb\\ProjetoANFWeb.csproj
+		SccProjectName1 = ProjetoANFWeb
+		SccLocalPath1 = ProjetoANFWeb
+		SccProjectUniqueName2 = ProjetoANFService\\ProjetoANFService.csproj
+		SccProjectName2 = ProjetoANFService
+		SccLocalPath2 = ProjetoANFService
+		SccProjectUniqueName3 = ProjetoANFCore\\ProjetoANFCore.csproj
+		SccProjectName3 = ProjetoANFCore
+		SccLocalPath3 = ProjetoANFCore
+	EndGlobalSection
+EndGlobal

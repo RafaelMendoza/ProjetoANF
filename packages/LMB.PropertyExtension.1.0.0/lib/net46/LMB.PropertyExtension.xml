@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LMB.PropertyExtension</name>
+    </assembly>
+    <members>
+        <member name="T:LMB.PropertyExtension.PropertyExtension">
+            <summary>
+            Extension Methods for Properties.
+            </summary>
+        </member>
+        <member name="M:LMB.PropertyExtension.PropertyExtension.GetDisplayAttributeValue(System.Object,System.String)">
+            <summary>
+            Returns the Name within the System.ComponentModel.DataAnnotations.DisplayAttribute from a property.
+            </summary>
+            <param name="entity">The class that contains the property from which the Name will be recovered.</param>
+            <param name="propertyName">The name of the property from which the Name will be recovered.</param>
+            <returns>
+            The Name within the System.ComponentModel.DataAnnotations.DisplayAttribute if exists or the value informed
+            in the <paramref name="propertyName"/> param if not.
+            </returns>
+        </member>
+        <member name="M:LMB.PropertyExtension.PropertyExtension.GetDisplayNameAttributeValue(System.Object,System.String)">
+            <summary>
+            Returns the DisplayName within the System.ComponentModel.DisplayNameAttribute from a property.
+            </summary>
+            <param name="entity">The class that contains the property from which the DisplayName will be recovered.</param>
+            <param name="propertyName">The name of the property from which the DisplayName will be recovered.</param>
+            <returns>
+            The Name within the System.ComponentModel.DisplayNameAttribute if exists or the value informed
+            in the <paramref name="propertyName"/> param if not.
+            </returns>
+        </member>
+        <member name="M:LMB.PropertyExtension.PropertyExtension.GetDisplayAttributeValue(System.Enum)">
+            <summary>
+            Returns the Name within the System.ComponentModel.DataAnnotations.DisplayAttribute from a property.
+            </summary>
+            <param name="value">The <see cref="T:System.Enum"/> that contains the property from which the Name will be recovered.</param>
+            <returns>
+            The Name within the System.ComponentModel.DataAnnotations.DisplayAttribute if exists or the value informed
+            in the <paramref name="value"/> param if not.
+            </returns>
+        </member>
+    </members>
+</doc>
